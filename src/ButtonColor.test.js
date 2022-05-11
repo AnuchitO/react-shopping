@@ -9,5 +9,5 @@ test('ButtonColor', () => {
 
   fireEvent.click(btn)
 
-  expect(btn.style.color).toBe('blue')
+  expect(btn).toHaveStyle({color: 'blue'})
 })
