@@ -11,3 +11,20 @@ test('ButtonColor', () => {
 
   expect(btn).toHaveStyle({color: 'blue'})
 })
+
+test('get checkbox by role', () => {
+  render(<ButtonColor />)
+
+  const chb = screen.getByRole('checkbox')
+
+  expect(chb).toBeEnabled()
+})
+
+// get checkbox by label
+test('get checkbox by label', () => {
+  render(<ButtonColor />)
+
+  const chb = screen.getByLabelText(/disable button/i)
+
+  expect(chb).toBeEnabled()
+})
