@@ -17,12 +17,12 @@ function ButtonColor() {
       <div>
         <input
           type="checkbox"
-          id="chbColoring"
+          id="chb-coloring"
           aria-checked="true"
           checked={checked}
           onChange={() => setChecked(!checked)}
         />
-        <label htmlFor={'chbColoring'}>Disable Button</label>
+        <label htmlFor={'chb-coloring'}>Disable Button</label>
       </div>
     </Fragment>
   )

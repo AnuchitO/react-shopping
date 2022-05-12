@@ -20,11 +20,18 @@ test('get checkbox by role', () => {
   expect(chb).toBeEnabled()
 })
 
-// get checkbox by label
 test('get checkbox by label', () => {
   render(<ButtonColor />)
 
   const chb = screen.getByLabelText(/disable button/i)
+
+  expect(chb).toBeEnabled()
+})
+
+test('get checkbox by role with name', () => {
+  render(<ButtonColor />)
+
+  const chb = screen.getByRole('checkbox', {name: 'Disable Button'})
 
   expect(chb).toBeEnabled()
 })
